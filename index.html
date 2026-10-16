@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PawsCare - Dog Adoption App</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Day 1: Basic Styling */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7f2;
+            color: #26352b;
+        }
+
+        /* Header */
+
+        header {
+            background-color: #245c42;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: #193f2e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        /* Main Content */
+
+        main {
+            width: 95%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #245c42;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Welcome Section */
+
+        .welcome {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px gray;
+        }
+
+        /* Dog Images */
+
+        .dog-image {
+            width: 200px;
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #245c42;
+        }
+
+        /* Dog Cards */
+
+        .dog-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .dog-card {
+            background-color: white;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px gray;
+        }
+
+        .dog-card h3 {
+            color: #245c42;
+        }
+
+        /* Button */
+
+        .adopt-button {
+            display: inline-block;
+            background-color: #e58b35;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .adopt-button:hover {
+            background-color: #bd6820;
+        }
+
+        /* Lists */
+
+        .care-list {
+            background-color: white;
+            padding: 25px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px gray;
+        }
+
+        /* Table */
+
+        .table-container {
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px gray;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            color: #245c42;
+            padding: 15px;
+        }
+
+        th {
+            background-color: #245c42;
+            color: white;
+            padding: 12px;
+            border: 1px solid black;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #edf5ef;
+        }
+
+        tbody tr:hover {
+            background-color: #d8eadb;
+        }
+
+        /* Contact Section */
+
+        .contact {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px gray;
+            text-align: center;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #245c42;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile Screen */
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .dog-card {
+                width: 100%;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="home">
+        <h1>🐾 PawsCare</h1>
+        <p>Give Every Dog a Loving Home!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#dogs">Dogs</a>
+        <a href="#care">Dog Care</a>
+        <a href="#details">Details</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- Day 3: Headings and Paragraphs -->
+        <section class="welcome">
+            <h2>Welcome to PawsCare!</h2>
+
+            <p>
+                Every dog deserves love, care, and a safe home.
+                Find your new best friend through PawsCare.
+            </p>
+
+            <p>
+                Adopt a dog and give it a happy life.
+            </p>
+        </section>
+
+        <!-- Day 4: Images and Attributes -->
+        <section id="dogs">
+            <h2>Our Dogs for Adoption</h2>
+
+            <div class="dog-list">
+
+                <article class="dog-card">
+                    <img
+                        class="dog-image"
+                        src="https://placehold.co/400x300?text=Tommy"
+                        alt="Tommy, a dog available for adoption">
+
+                    <h3>Tommy</h3>
+
+                    <p>Breed: Labrador</p>
+                    <p>Age: 2 Years</p>
+                    <p>Location: Chennai</p>
+
+                    <a class="adopt-button" href="#contact">
+                        Adopt Tommy
+                    </a>
+                </article>
+
+                <article class="dog-card">
+                    <img
+                        class="dog-image"
+                        src="https://placehold.co/400x300?text=Rocky"
+                        alt="Rocky, a dog available for adoption">
+
+                    <h3>Rocky</h3>
+
+                    <p>Breed: German Shepherd</p>
+                    <p>Age: 3 Years</p>
+                    <p>Location: Trichy</p>
+
+                    <a class="adopt-button" href="#contact">
+                        Adopt Rocky
+                    </a>
+                </article>
+
+                <article class="dog-card">
+                    <img
+                        class="dog-image"
+                        src="https://placehold.co/400x300?text=Bruno"
+                        alt="Bruno, a dog available for adoption">
+
+                    <h3>Bruno</h3>
+
+                    <p>Breed: Golden Retriever</p>
+                    <p>Age: 1 Year</p>
+                    <p>Location: Ariyalur</p>
+
+                    <a class="adopt-button" href="#contact">
+                        Adopt Bruno
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Day 5: HTML Lists -->
+        <section id="care">
+            <h2>How to Care for a Dog</h2>
+
+            <div class="care-list">
+
+                <h3>Important Care Tips</h3>
+
+                <ul>
+                    <li>Provide nutritious dog food.</li>
+                    <li>Give your dog clean drinking water.</li>
+                    <li>Take your dog for regular exercise.</li>
+                    <li>Arrange veterinary checkups.</li>
+                </ul>
+
+                <h3>Adoption Process</h3>
+
+                <ol>
+                    <li>Choose your favourite dog.</li>
+                    <li>Contact the adoption centre.</li>
+                    <li>Discuss the dog's care requirements.</li>
+                    <li>Complete the adoption process.</li>
+                </ol>
+
+            </div>
+        </section>
+
+        <!-- Day 6 and Day 7: HTML Table and CSS -->
+        <section id="details">
+            <h2>Dog Adoption Details</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <caption>Available Dogs Information</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">S.No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Breed</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Location</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tommy</td>
+                            <td>Labrador</td>
+                            <td>2 Years</td>
+                            <td>Chennai</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Rocky</td>
+                            <td>German Shepherd</td>
+                            <td>3 Years</td>
+                            <td>Trichy</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Bruno</td>
+                            <td>Golden Retriever</td>
+                            <td>1 Year</td>
+                            <td>Ariyalur</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+
+            <p>Interested in adopting a dog?</p>
+
+            <p>
+                Email:
+                <a href="mailto:adoption@example.com">
+                    adoption@example.com
+                </a>
+            </p>
+
+            <p>Please contact a verified adoption centre to begin adoption.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 PawsCare</p>
+        <p>Adopt, Don't Shop! 🐾</p>
+    </footer>
+
+</body>
+</html>
